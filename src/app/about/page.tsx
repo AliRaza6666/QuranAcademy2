@@ -5,9 +5,12 @@ import { AboutJourneySection } from "./AboutJourneySection";
 import { AboutMissionVisionSection } from "./AboutMissionVisionSection";
 
 export const metadata: Metadata = {
-  title: "About Us | Shia Quran Hub",
+  title: "About Us",
   description:
     "Learn about Shia Quran Hub, our mission, values, learning journey, and commitment to authentic Quranic education.",
+  alternates: {
+    canonical: "/about",
+  },
 };
 
 export default function AboutPage() {

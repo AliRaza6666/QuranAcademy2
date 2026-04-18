@@ -13,9 +13,31 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Shia Quran Hub | The Sacred Sanctuary of Learning",
+  metadataBase: new URL("https://www.shiaquranhub.com"),
+  title: {
+    default: "Shia Quran Hub | The Sacred Sanctuary of Learning",
+    template: "%s | Shia Quran Hub",
+  },
   description:
     "A modern sanctuary for spiritual growth. Connect with qualified scholars and master the Quran through tailored online sessions designed for your lifestyle.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "/",
+    siteName: "Shia Quran Hub",
+    title: "Shia Quran Hub | The Sacred Sanctuary of Learning",
+    description:
+      "A modern sanctuary for spiritual growth. Connect with qualified scholars and master the Quran through tailored online sessions designed for your lifestyle.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shia Quran Hub | The Sacred Sanctuary of Learning",
+    description:
+      "A modern sanctuary for spiritual growth. Connect with qualified scholars and master the Quran through tailored online sessions designed for your lifestyle.",
+  },
 };
 
 import { Header } from "./components/layout/Header";
@@ -33,7 +55,7 @@ export default function RootLayout({
     >
       <body className="bg-background text-foreground font-body antialiased min-h-full flex flex-col">
         <Header />
-        <main className="flex-1 pt-10">{children}</main>
+        <div className="flex-1 pt-10">{children}</div>
         <Footer />
       </body>
     </html>

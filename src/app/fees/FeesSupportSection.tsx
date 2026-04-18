@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Clock3, MessageCircle, ExternalLink, CalendarClock } from "lucide-react";
 
 export function FeesSupportSection() {
@@ -13,10 +14,10 @@ export function FeesSupportSection() {
           <p className="text-muted-foreground">
             Our support team is ready to help you choose the right plan for your needs.
           </p>
-          <a href="#" className="inline-flex items-center gap-2 font-bold text-primary hover:underline">
+          <Link href="/contact" className="inline-flex items-center gap-2 font-bold text-primary hover:underline">
             Contact via WhatsApp
             <ExternalLink className="h-4 w-4" aria-hidden="true" />
-          </a>
+          </Link>
         </article>
 
         <article className="space-y-5 rounded-xl border border-border bg-secondary/20 p-8 text-center sm:p-10 lg:p-12">

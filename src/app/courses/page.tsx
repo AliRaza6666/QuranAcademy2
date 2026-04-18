@@ -4,9 +4,12 @@ import { CoursesGridSection } from "./CoursesGridSection";
 import { CoursesHeroSection } from "./CoursesHeroSection";
 
 export const metadata: Metadata = {
-  title: "Courses | Shia Quran Hub",
+  title: "Courses",
   description:
     "Explore the Quran learning tracks at Shia Quran Hub, from beginner reading to advanced study.",
+  alternates: {
+    canonical: "/courses",
+  },
 };
 
 export default function CoursesPage() {

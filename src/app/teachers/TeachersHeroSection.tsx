@@ -2,15 +2,15 @@
 import React from "react";
 
 const TeachersHeroSection = () => (
-  <header className="max-w-7xl mx-auto px-8 mb-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+  <header className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16 sm:mb-20 lg:mb-24 grid grid-cols-1 lg:grid-cols-12 gap-10 sm:gap-12 items-center">
     <div className="lg:col-span-7">
       <span className="uppercase tracking-[0.2em] text-secondary font-bold text-xs mb-6 block">
         The Guardians of Knowledge
       </span>
-      <h1 className="text-6xl lg:text-8xl font-headline font-extrabold tracking-tighter text-primary leading-none mb-8">
+      <h1 className="text-4xl sm:text-5xl lg:text-8xl font-headline font-extrabold tracking-tighter text-primary leading-[1.02] mb-6 sm:mb-8">
         Guided by the <span className="text-secondary italic">Wisdom</span> of the Ages.
       </h1>
-      <p className="text-xl text-on-surface-variant max-w-xl leading-relaxed">
+      <p className="text-base sm:text-lg lg:text-xl text-on-surface-variant max-w-xl leading-relaxed">
         Our educators are more than instructors; they are mentors dedicated to the spiritual and intellectual growth of every student, bridging traditional scholarship with modern pedagogy.
       </p>
     </div>
@@ -28,9 +28,9 @@ const TeachersHeroSection = () => (
       </div>
       
     
-      <div className="absolute -bottom-8 -left-8 bg-background p-8 rounded-xl shadow-xl max-w-[240px] z-[9999]">
+      <div className="relative mt-6 max-w-[220px] bg-background p-6 rounded-xl shadow-xl sm:absolute sm:-bottom-8 sm:-left-8 sm:mt-0 sm:max-w-[240px] z-[9999]">
         <p className="font-headline font-bold text-black italic">
-          "Knowledge is a light which Allah casts into the heart of whomsoever He wills."
+          &quot;Knowledge is a light which Allah casts into the heart of whomsoever He wills.&quot;
         </p>
       </div>
     </div>

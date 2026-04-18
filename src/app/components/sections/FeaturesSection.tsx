@@ -1,14 +1,14 @@
 
 export function FeaturesSection() {
   return (
-    <section className="py-32 px-8 max-w-7xl mx-auto">
+    <section className="py-20 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <div className="text-center mb-24">
         <h2 className="text-4xl md:text-5xl font-extrabold font-headline text-primary mb-6">
           Why Choose Our Sanctuary?
         </h2>
         <div className="h-1.5 w-24 bg-accent mx-auto rounded-full"></div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto">
         {/* Certified Teachers */}
         <div className="md:col-span-8 bg-accent/20 rounded-3xl p-12 flex flex-col justify-between shadow-sm">
           <div>
@@ -61,11 +61,13 @@ export function FeaturesSection() {
               Join a community of 5,000+ learners from over 30 countries sharing the spiritual journey.
             </p>
           </div>
-          <div className="hidden lg:block w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center">
-            <svg className="w-10 h-10 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <circle cx="12" cy="12" r="10" strokeWidth="2" />
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2 12h20" />
-            </svg>
+          <div className="hidden lg:block">
+            <div className="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center">
+              <svg className="w-10 h-10 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <circle cx="12" cy="12" r="10" strokeWidth="2" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2 12h20" />
+              </svg>
+            </div>
           </div>
         </div>
       </div>

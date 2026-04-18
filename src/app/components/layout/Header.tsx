@@ -87,7 +87,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className={`block text-sm font-semibold font-headline transition
+                className={`block py-2 text-base font-semibold font-headline transition
                   ${
                     isActive
                       ? "text-primary"
@@ -103,7 +103,7 @@ export function Header() {
           <Link
             href="/courses"
             onClick={() => setOpen(false)}
-            className="block text-center bg-primary text-white px-6 py-3 rounded-xl font-bold text-sm"
+            className="block text-center bg-primary text-white px-6 py-3.5 rounded-xl font-bold text-sm"
           >
             Start Learning
           </Link>

@@ -3,9 +3,12 @@ import { ContactCTASection } from "./ContactCTASection";
 import { ContactMainSection } from "./ContactMainSection";
 
 export const metadata: Metadata = {
-  title: "Contact | Shia Quran Hub",
+  title: "Contact",
   description:
     "Contact Shia Quran Hub for course inquiries, admissions support, and direct guidance from our team.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {

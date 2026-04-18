@@ -4,7 +4,7 @@ import { BadgeCheck, Languages, Mic, Monitor, HeartHandshake } from "lucide-reac
 
 const TeacherQualitiesGrid = () => (
   <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="grid grid-cols-1 md:grid-cols-6 gap-6 h-auto lg:h-175">
+    <div className="grid grid-cols-1 md:grid-cols-6 gap-6 h-auto">
       {/* Card 1: Large Featured - Certified Islamic Scholars */}
       <div className="md:col-span-3 md:row-span-2 bg-primary rounded-xl p-6 sm:p-8 lg:p-12 flex flex-col justify-between text-primary-foreground relative overflow-hidden group min-h-80">
         <div className="absolute inset-0 sacred-pattern opacity-10 group-hover:opacity-20 transition-opacity"></div>

@@ -82,7 +82,7 @@ export function ContactMainSection() {
             <span className="inline-block text-xs font-bold uppercase tracking-[0.2em] text-accent font-label">
               Connect with Us
             </span>
-            <h1 className="max-w-xl font-headline text-5xl font-extrabold tracking-tight leading-[1.05] text-primary sm:text-6xl lg:text-7xl">
+            <h1 className="max-w-xl font-headline text-4xl font-extrabold tracking-tight leading-[1.05] text-primary sm:text-5xl lg:text-7xl">
               Inquire with <br />
               <span className="text-accent">Reverence.</span>
             </h1>
@@ -126,7 +126,7 @@ export function ContactMainSection() {
                   </p>
 
                   <Link
-                    href="#"
+                    href="mailto:admissions@shiaquranhub.com"
                     className="inline-flex items-center gap-3 rounded-full bg-secondary px-7 py-4 font-bold"
                   >
                     <Send className="h-4 w-4" />

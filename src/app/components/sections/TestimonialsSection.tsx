@@ -1,22 +1,24 @@
 
+import Image from "next/image";
+
 const testimonials = [
   {
     name: "Fatima Zahra",
     location: "London, UK",
     text: "The platform has changed my approach to Quranic studies. The teachers are incredibly patient and the schedule is so accommodating for a busy professional.",
-    avatar: "https://randomuser.me/api/portraits/women/65.jpg",
+    avatar: "/assets/testimonials/fatima-zahra.svg",
   },
   {
     name: "Hussain Ali",
     location: "Toronto, Canada",
     text: "Finding a Shia-specific hub with such high-end technology and qualified teachers was a blessing. My Tajweed has improved significantly in just 3 months.",
-    avatar: "https://randomuser.me/api/portraits/men/32.jpg",
+    avatar: "/assets/testimonials/hussain-ali.svg",
   },
   {
     name: "Sakina Raza",
     location: "Sydney, Australia",
     text: "Highly recommended for children. The interactive tools and gentle guidance make learning fun and spiritually engaging for my kids.",
-    avatar: "https://randomuser.me/api/portraits/women/68.jpg",
+    avatar: "/assets/testimonials/sakina-raza.svg",
   },
 ];
 
@@ -49,7 +51,7 @@ export function TestimonialsSection() {
               <p className="text-surface-foreground text-lg leading-relaxed italic mb-8">"{t.text}"</p>
               <div className="flex items-center gap-4 mt-auto">
                 <div className="w-12 h-12 rounded-full bg-surface overflow-hidden border border-accent/20">
-                  <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
+                  <Image src={t.avatar} alt={t.name} width={48} height={48} className="w-full h-full object-cover" />
                 </div>
                 <div>
                   <h4 className="font-bold text-primary">{t.name}</h4>
