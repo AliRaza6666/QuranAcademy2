@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project created with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shia Quran Hub
 
-## Getting Started
+Modern Quran learning platform built with Next.js App Router, Tailwind CSS, and Supabase.
 
-First, run the development server:
+## Tech Stack
+
+- Next.js 16 (App Router)
+- React 19 + TypeScript
+- Tailwind CSS 4
+- Lucide Icons
+- Supabase (contact form data)
+- React Toastify (contact form feedback)
+
+## Pages
+
+- `/` Home
+- `/courses` Courses
+- `/about` About
+- `/teachers` Teachers
+- `/fees` Fees
+- `/contact` Contact
+
+## Features
+
+- SEO-ready metadata setup (route-level metadata, robots, sitemap)
+- Fully responsive multi-page marketing site
+- Contact form integrated with Supabase table `contacts`
+- Local static assets for course/contact visuals
+
+## Project Structure
+
+```text
+src/app/
+	components/
+		layout/
+		sections/
+	about/
+	contact/
+	courses/
+	fees/
+	teachers/
+	layout.tsx
+	page.tsx
+	robots.ts
+	sitemap.ts
+public/assets/
+	about/
+	contact/
+	courses/
+	testimonials/
+```
+
+## Environment Variables
+
+Create `.env` in the project root:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+## Local Development
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run dev server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build production:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Start production server:
 
-## Learn More
+```bash
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+Lint:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run lint
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contact Form (Supabase)
 
-## Deploy on Vercel
+The contact form inserts records into a table named `contacts` with these fields:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `name`
+- `email`
+- `message`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Make sure your Supabase Row Level Security and insert policy allow this operation for your intended usage.
+
+## Deployment
+
+Deploy with any platform that supports Next.js (Vercel recommended). Ensure environment variables are configured in your deployment settings.
