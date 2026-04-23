@@ -1,0 +1,1 @@
+// This is a placeholder for the logo image. Please move your logo image to public/assets/logo.png or similar for use in the Navbar.

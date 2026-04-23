@@ -1,62 +1,129 @@
+// import Image from "next/image";
+
+// export function HeroSection() {
+//   return (
+//     <section
+//       className="relative min-h-screen flex items-center overflow-hidden p-0 m-0 mt-0 pt-0"
+//       aria-label="Hero"
+//     >
+//       {/* Full background Quran image */}
+//       <div className="absolute inset-0 w-full h-full -z-10">
+//         <Image
+// src="/assets/hero/quranwithStand.png"
+//           alt="Quran on stand"
+//           fill
+//           sizes="100vw"
+//           className="object-cover"
+//           priority
+//           quality={85}
+//         />
+//         {/* Dark overlay for readability */}
+//         <div className="absolute inset-0 bg-black/60" />
+//       </div>
+//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-start min-h-screen p-0 m-0">
+//         <span className="inline-block px-4 py-1.5 rounded-full bg-accent/20 text-accent font-bold tracking-[0.2em] uppercase mb-6 font-label text-xs w-fit">
+//           Spiritual Excellence
+//         </span>
+//         <h1 className="text-5xl md:text-7xl font-extrabold text-white font-headline leading-[1.1] tracking-tight mb-8 max-w-3xl">
+//           Learn Quran with <span className="text-accent">Expert Guidance</span> from Home
+//         </h1>
+//         <p className="text-xl text-white/90 font-body leading-relaxed mb-12 max-w-xl">
+//           A modern sanctuary for spiritual growth. Connect with qualified scholars and master the Quran through tailored online sessions designed for your lifestyle.
+//         </p>
+//         <div className="flex flex-col sm:flex-row gap-4 mb-12">
+//           <a
+//             href="/courses"
+//             className="bg-accent text-accent-foreground px-10 py-5 rounded-xl font-headline font-extrabold text-lg hover:bg-accent/80 transition-all shadow-xl shadow-primary/20 text-center"
+//           >
+//             Start Learning
+//           </a>
+//           <a
+//             href="/courses"
+//             className="border border-accent/60 text-white px-10 py-5 rounded-xl font-headline font-bold text-lg hover:bg-white/10 transition-all text-center"
+//           >
+//             Explore Courses
+//           </a>
+//         </div>
+//         {/* Quote Card Overlay - responsive */}
+//         <div
+//           className="w-full max-w-md z-20 mt-20
+//             relative
+//             md:absolute md:top-72 md:right-8 md:mt-0"
+//         >
+//           <div className="bg-white/20 backdrop-blur-md p-6 md:p-8 rounded-2xl border border-white/30 shadow-2xl">
+//             <p className="text-xl md:text-3xl font-headline italic text-white leading-relaxed text-center md:text-left">
+//               "Read, and your Lord is the Most Generous."
+//             </p>
+//             <p className="mt-4 md:mt-6 text-accent font-bold tracking-widest uppercase text-sm text-center md:text-left">AL-ALAQ 96:3</p>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+
+import Image from "next/image";
+
 export function HeroSection() {
   return (
     <section
-      className="relative min-h-[620px] sm:min-h-[700px] flex items-center overflow-hidden bg-gradient-to-br from-primary via-primary/80 to-accent/10"
+      className="relative w-full h-screen flex items-center overflow-hidden"
       aria-label="Hero"
     >
-      {/* Sacred SVG pattern as background overlay */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 opacity-10 pointer-events-none"
-        style={{
-          backgroundImage:
-            "url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M30 0l2.5 7.5L40 10l-7.5 2.5L30 20l-2.5-7.5L20 10l7.5-2.5L30 0zm0 40l2.5 7.5L40 50l-7.5 2.5L30 60l-2.5-7.5L20 50l7.5-2.5L30 40zM10 20l2.5 7.5L20 30l-7.5 2.5L10 40l-2.5-7.5L0 30l7.5-2.5L10 20zm40 0l2.5 7.5L60 30l-7.5 2.5L50 40l-2.5-7.5L40 30l7.5-2.5L50 20z\' fill=\'%23A17812\' fill-opacity=\'0.05\' fill-rule=\'evenodd\'/%3E%3C/svg%3E')",
-        }}
-      />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full grid md:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center py-16 sm:py-24 relative z-10">
-        {/* Left: Headline, subheadline, actions */}
-        <div className="text-left">
-          <span className="inline-block px-4 py-1.5 rounded-full bg-accent/20 text-accent font-bold tracking-[0.2em] uppercase mb-6 font-label text-xs">
-            Spiritual Excellence
-          </span>
-          <h1 className="text-5xl md:text-7xl font-extrabold text-primary-foreground font-headline leading-[1.1] tracking-tight mb-8">
-            Learn Quran with <span className="text-accent">Expert Guidance</span> from Home
-          </h1>
-          <p className="text-xl text-primary font-body leading-relaxed mb-12 max-w-lg">
-            A modern sanctuary for spiritual growth. Connect with qualified scholars and master the Quran through tailored online sessions designed for your lifestyle.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href="/courses"
-              className="bg-accent text-accent-foreground px-10 py-5 rounded-xl font-headline font-extrabold text-lg hover:bg-accent/80 transition-all shadow-xl shadow-primary/20 text-center"
-            >
-              Start Learning
-            </a>
-            <a
-              href="/courses"
-              className="border border-primary/30 text-primary-foreground px-10 py-5 rounded-xl font-headline font-bold text-lg hover:bg-white/5 transition-all text-center"
-            >
-              Explore Courses
-            </a>
-          </div>
+      {/* Background Image */}
+      <div className="absolute inset-0 w-full h-full -z-10">
+        <Image
+          src="/assets/hero/quranwithStand.png"
+          alt="Quran on stand"
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
+          priority
+          quality={80}
+        />
+        <div className="absolute inset-0 bg-black/50" aria-hidden="true" />
+      </div>
+
+      {/* Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-start pt-24 md:pt-32">
+        
+        <span className="inline-block px-4 py-1.5 rounded-full bg-accent/20 text-accent font-bold tracking-[0.2em] uppercase mb-6 font-label text-xs w-fit">
+          Spiritual Excellence
+        </span>
+
+        <h1 className="text-5xl md:text-7xl font-extrabold text-white font-headline leading-[1.1] tracking-tight mb-8 max-w-3xl">
+          Learn Quran with <span className="text-accent">Expert Guidance</span> from Home
+        </h1>
+
+        <p className="text-xl text-white/90 font-body leading-relaxed mb-12 max-w-xl">
+          A modern sanctuary for spiritual growth. Connect with qualified scholars and master the Quran through tailored online sessions designed for your lifestyle.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 mb-12">
+          <a
+            href="/enroll"
+            className="bg-accent text-accent-foreground px-10 py-5 rounded-xl font-headline font-extrabold text-lg hover:bg-accent/80 transition-all shadow-xl shadow-primary/20 text-center"
+          >
+            Start Learning
+          </a>
+          <a
+            href="/courses"
+            className="border border-accent/60 text-white px-10 py-5 rounded-xl font-headline font-bold text-lg hover:bg-white/10 transition-all text-center"
+          >
+            Explore Courses
+          </a>
         </div>
-        {/* Right: Quote card */}
-        <div className="relative hidden md:flex justify-center items-center">
-          <div className="w-[420px] h-[420px] bg-gradient-to-tr from-accent/20 to-transparent rounded-full absolute blur-3xl" />
-          <div className="relative w-full aspect-square bg-primary rounded-xl overflow-hidden flex items-center justify-center border border-white/5">
-            <div className="p-12 text-center relative z-10">
-              <div className="flex justify-center mb-6">
-                <svg width="80" height="80" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="text-accent mx-auto">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3v2m0 14v2m9-9h-2M5 12H3m15.364-6.364l-1.414 1.414M6.05 17.95l-1.414 1.414m12.728 0l-1.414-1.414M6.05 6.05L4.636 4.636" />
-                </svg>
-              </div>
-              <div className="bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/10">
-                <p className="text-2xl font-headline italic text-primary-foreground leading-relaxed">
-                  "Read, and your Lord is the Most Generous."
-                </p>
-                <p className="mt-4 text-accent font-bold tracking-widest uppercase text-sm">Al-Alaq 96:3</p>
-              </div>
-            </div>
+
+        {/* Quote Card */}
+        <div className="w-full max-w-md z-20 mt-10 relative md:absolute md:top-1/2 md:-translate-y-1/2 md:right-8">
+          <div className="bg-white/10 backdrop-blur-md p-6 md:p-8 rounded-2xl border border-white/20 shadow-2xl">
+            <p className="text-xl md:text-3xl font-headline italic text-white leading-relaxed text-center md:text-left">
+              "Read, and your Lord is the Most Generous."
+            </p>
+            <p className="mt-4 md:mt-6 text-accent font-bold tracking-widest uppercase text-sm text-center md:text-left">
+              AL-ALAQ 96:3
+            </p>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Amiri } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -10,6 +10,13 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const amiri = Amiri({
+  variable: "--font-amiri",
+  subsets: ["latin", "arabic"],
+  weight: ["400", "700"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -51,11 +58,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`scroll-smooth ${geistSans.variable} ${geistMono.variable}`}
+      className={`scroll-smooth ${geistSans.variable} ${geistMono.variable} ${amiri.variable}`}
     >
       <body className="bg-background text-foreground font-body antialiased min-h-full flex flex-col">
         <Header />
-        <div className="flex-1 pt-10">{children}</div>
+        <div className="flex-1">{children}</div>
         <Footer />
       </body>
     </html>

@@ -208,10 +208,11 @@ export function ContactMainSection() {
                   key={item.src}
                   className="relative h-24 overflow-hidden rounded-2xl border border-border bg-secondary/10"
                 >
-                  <Image
+                      <Image
                     src={item.src}
                     alt={item.alt}
                     fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover grayscale opacity-45"
                   />
                 </div>

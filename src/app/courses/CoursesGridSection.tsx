@@ -1,53 +1,112 @@
+import Link from "next/link";
 import Image from "next/image";
-import { BookOpen, BrainCircuit, Globe, GraduationCap, ArrowRight } from "lucide-react";
+import {
+  ArrowRight,
+  BookOpen,
+  BrainCircuit,
+  Heart,
+  Languages,
+  Mic,
+  Scroll,
+  Search,
+  Sparkles,
+} from "lucide-react";
 
 const courses = [
   {
     level: "BEGINNER",
     icon: BookOpen,
-    image: "/assets/courses/quran-reading.jpg",
+    image: "/assets/courses/Basic Qaida Reading with Tajweed.png",
     imageAlt: "Open Quran with elegant Arabic calligraphy",
-    modules: "24 Modules",
-    title: "Quran Reading (Basic to Advanced)",
+    modules: "8 Modules",
+    title: "Basic Qaida Reading with Tajweed",
     description:
-      "Master Arabic phonetics and progress to fluent recitation with a structured step-by-step path.",
-    duration: "6 Months",
+      "Embark on your sacred journey with foundational Qaida rules and Tajweed principles. Build confidence in Quranic recitation through guided, step-by-step learning.",
+    duration: "3 Months",
     badge: "Beginner",
   },
   {
     level: "INTERMEDIATE",
-    icon: BrainCircuit,
-    image: "/assets/courses/tajweed.jpg",
-    imageAlt: "Golden geometric Islamic pattern",
-    modules: "18 Modules",
-    title: "Tajweed Course",
+    icon: Mic,
+    image: "/assets/courses/Shia Quran with Tajweed Course Online.png",
+    imageAlt: "Calligraphy and recitation imagery",
+    modules: "16 Modules",
+    title: "Shia Quran with Tajweed Course Online",
     description:
-      "Perfect pronunciation through the rules of Tajweed so every letter is articulated correctly.",
+      "Master Tajweed rules in the Shia tradition with expert online mentorship. Perfect your recitation and deepen your connection to the Divine words.",
+    duration: "6 Months",
+    badge: "Intermediate",
+  },
+  {
+    level: "ALL LEVELS",
+    icon: BrainCircuit,
+    image: "/assets/courses/Hifz Memorization Quran Online.png",
+    imageAlt: "Peaceful memorization environment",
+    modules: "Flexible Timeline",
+    title: "Hifz Memorization Quran Online",
+    description:
+      "Preserve the sacred Quran in your heart through personalized memorization guidance. A flexible path tailored to your spiritual commitment and pace.",
+    duration: "Custom",
+    badge: "All Levels",
+  },
+  {
+    level: "ALL LEVELS",
+    icon: Languages,
+    image: "/assets/courses/Quran with Translation.png",
+    imageAlt: "Quran translation study setting",
+    modules: "12 Modules",
+    title: "Quran with Translation",
+    description:
+      "Explore the meanings of Quranic verses alongside recitation. Gain deeper spiritual insight and understanding through comprehensive translation studies.",
+    duration: "5 Months",
+    badge: "All Levels",
+  },
+  {
+    level: "ADVANCED",
+    icon: Search,
+    image: "/assets/courses/Quran with Tafseer.png",
+    imageAlt: "Study of Quranic commentary",
+    modules: "20 Modules",
+    title: "Quran with Tafseer",
+    description:
+      "Delve into the profound explanations and historical context of Quranic verses. A Shia-centered approach to unlocking sacred knowledge and wisdom.",
+    duration: "9 Months",
+    badge: "Advanced",
+  },
+  {
+    level: "INTERMEDIATE",
+    icon: Scroll,
+    image: "/assets/courses/Nahjul Balagha.png",
+    imageAlt: "Classical manuscript study",
+    modules: "8 Modules",
+    title: "Nahjul Balagha",
+    description:
+      "Study the eloquent sermons and letters of Imam Ali (a.s.). Strengthen your spiritual foundation with timeless wisdom and ethical teachings.",
     duration: "4 Months",
     badge: "Intermediate",
   },
   {
     level: "ALL LEVELS",
-    icon: Globe,
-    image: "/assets/courses/hifz.jpg",
-    imageAlt: "Peaceful library interior representing memorization",
-    modules: "Flexible Timeline",
-    title: "Hifz Program",
+    icon: Sparkles,
+    image: "/assets/courses/Duaa & Adhkar.png",
+    imageAlt: "Duaa and quiet reflection",
+    modules: "6 Modules",
+    title: "Duaa & Adhkar",
     description:
-      "A personalized memorization journey with expert tutors to help preserve the Divine words in your heart.",
-    duration: "Custom",
+      "Enrich your worship with powerful supplications and daily remembrances. Cultivate spiritual calm and deepen your connection to the Divine.",
+    duration: "3 Months",
     badge: "All Levels",
   },
   {
     level: "ADVANCED",
-    icon: GraduationCap,
-    image: "/assets/courses/quran-reading.jpg",
-    imageAlt: "Warm light across a Quran page and study setting",
-    modules: "32 Modules",
-    title: "Tafsir Course",
+    icon: Heart,
+    image: "/assets/courses/Saheefa Sajjadia.png",
+    imageAlt: "Sacred devotional text",
+    modules: "10 Modules",
+    title: "Saheefa Sajjadia",
     description:
-      "Delve into meanings, historical context, and spiritual lessons of the Quranic verses through a Shia lens.",
-    duration: "12 Months",
+      "Reflect on the profound supplications of Imam Zain al-Abidin (a.s.). Experience heartfelt devotion through guided study of sacred prayers.",
+    duration: "5 Months",
     badge: "Advanced",
   },
 ];
@@ -55,16 +114,16 @@ const courses = [
 export function CoursesGridSection() {
   return (
     <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-8">
-      <div className="grid gap-8 md:grid-cols-2">
+      <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {courses.map((course) => {
           const Icon = course.icon;
 
           return (
             <article
               key={course.title}
-              className="group overflow-hidden rounded-[2rem] border border-border bg-surface shadow-sm transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl"
+              className="group overflow-hidden rounded-2xl border border-border bg-white shadow-sm transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl"
             >
-              <div className="relative h-56 overflow-hidden">
+              <div className="relative aspect-video overflow-hidden">
                 <Image
                   src={course.image}
                   alt={course.imageAlt}
@@ -72,22 +131,23 @@ export function CoursesGridSection() {
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-primary/65 via-primary/20 to-transparent" />
-                <div className="absolute left-6 top-6 rounded-full bg-white/90 px-3 py-1 text-xs font-bold text-primary shadow-sm backdrop-blur">
+                <div className="absolute left-6 top-6 rounded-full bg-white px-3 py-1 text-xs font-bold text-primary shadow-sm backdrop-blur">
                   {course.badge}
                 </div>
                 <div className="absolute bottom-6 left-6 right-6">
                   <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/80">
                     {course.level}
                   </p>
-                  <h3 className="mt-2 max-w-md font-headline text-2xl font-bold text-white">
-                    {course.title}
-                  </h3>
                 </div>
               </div>
 
               <div className="p-6">
-                <div className="flex items-center gap-3 text-sm font-semibold text-foreground/65">
-                  <Icon className="h-5 w-5 text-accent" />
+                <h3 className="font-headline text-2xl font-bold text-[#0a1d27] leading-tight">
+                  {course.title}
+                </h3>
+
+                <div className="mt-4 flex items-center gap-3 text-sm font-semibold text-foreground/65">
+                  <Icon className="h-5 w-5 text-[#9b7e46]" />
                   <span>{course.modules}</span>
                 </div>
 
@@ -105,13 +165,13 @@ export function CoursesGridSection() {
                     </p>
                   </div>
 
-                  <button
-                    type="button"
-                    className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-3 text-sm font-bold text-white transition-all hover:bg-primary"
+                  <Link
+                    href="/enroll"
+                    className="inline-flex items-center gap-2 rounded-full border border-[#9b7e46] px-5 py-3 text-sm font-bold text-[#9b7e46] bg-transparent transition-all hover:bg-[#9b7e46] hover:text-white"
                   >
                     Enroll Now
                     <ArrowRight className="h-4 w-4" />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </article>
