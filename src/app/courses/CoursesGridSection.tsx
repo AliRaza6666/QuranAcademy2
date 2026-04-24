@@ -114,67 +114,90 @@ const courses = [
 export function CoursesGridSection() {
   return (
     <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-8">
+
+      {/* 🔥 NEW: Section intro (fixes abrupt transition from hero) */}
+      <div className="mb-16 text-center">
+        <span className="inline-block px-4 py-1.5 rounded-full bg-accent/10 text-accent font-bold tracking-[0.2em] uppercase mb-4 text-xs">
+          Explore Courses
+        </span>
+
+        <h2 className="text-4xl md:text-5xl font-extrabold text-accent font-headline mb-4">
+          Structured Learning Paths for Every Stage
+        </h2>
+
+        <p className="text-foreground/70 max-w-2xl mx-auto text-lg leading-relaxed">
+          Choose from carefully designed Quranic courses that guide you from
+          foundational recitation to deep spiritual understanding.
+        </p>
+      </div>
+
+      {/* Grid */}
       <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         {courses.map((course) => {
           const Icon = course.icon;
 
           return (
             <article
-              key={course.title}
-              className="group overflow-hidden rounded-2xl border border-border bg-white shadow-sm transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl"
-            >
-              <div className="relative aspect-video overflow-hidden">
-                <Image
-                  src={course.image}
-                  alt={course.imageAlt}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-primary/65 via-primary/20 to-transparent" />
-                <div className="absolute left-6 top-6 rounded-full bg-white px-3 py-1 text-xs font-bold text-primary shadow-sm backdrop-blur">
-                  {course.badge}
-                </div>
-                <div className="absolute bottom-6 left-6 right-6">
-                  <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/80">
-                    {course.level}
-                  </p>
-                </div>
-              </div>
+  key={course.title}
+  className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-white shadow-sm transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl"
+>
+  {/* Image */}
+  <div className="relative aspect-video overflow-hidden">
+    <Image
+      src={course.image}
+      alt={course.imageAlt}
+      fill
+      className="object-cover transition-transform duration-700 group-hover:scale-105"
+    />
+    <div className="absolute inset-0 bg-linear-to-t from-primary/65 via-primary/20 to-transparent" />
 
-              <div className="p-6">
-                <h3 className="font-headline text-2xl font-bold text-[#0a1d27] leading-tight">
-                  {course.title}
-                </h3>
+    <div className="absolute left-6 top-6 rounded-full bg-white px-3 py-1 text-xs font-bold text-primary shadow-sm backdrop-blur">
+      {course.badge}
+    </div>
 
-                <div className="mt-4 flex items-center gap-3 text-sm font-semibold text-foreground/65">
-                  <Icon className="h-5 w-5 text-[#9b7e46]" />
-                  <span>{course.modules}</span>
-                </div>
+    <div className="absolute bottom-6 left-6 right-6">
+      <p className="text-xs font-bold uppercase tracking-[0.22em] text-white/80">
+        {course.level}
+      </p>
+    </div>
+  </div>
 
-                <p className="mt-4 leading-7 text-foreground/70">
-                  {course.description}
-                </p>
+  {/* Content */}
+  <div className="flex flex-col flex-1 p-6">
+    <h3 className="font-headline text-2xl font-bold text-[#0a1d27] leading-tight">
+      {course.title}
+    </h3>
 
-                <div className="mt-8 flex items-center justify-between border-t border-border pt-6">
-                  <div>
-                    <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/50">
-                      Duration
-                    </p>
-                    <p className="mt-1 font-headline text-lg font-bold text-primary">
-                      {course.duration}
-                    </p>
-                  </div>
+    <div className="mt-4 flex items-center gap-3 text-sm font-semibold text-foreground/65">
+      <Icon className="h-5 w-5 text-[#9b7e46]" />
+      <span>{course.modules}</span>
+    </div>
 
-                  <Link
-                    href="/enroll"
-                    className="inline-flex items-center gap-2 rounded-full border border-[#9b7e46] px-5 py-3 text-sm font-bold text-[#9b7e46] bg-transparent transition-all hover:bg-[#9b7e46] hover:text-white"
-                  >
-                    Enroll Now
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </div>
-              </div>
-            </article>
+    <p className="mt-4 leading-7 text-foreground/70 flex-1">
+      {course.description}
+    </p>
+
+    {/* Bottom section FIXED */}
+    <div className="mt-6 flex items-center justify-between border-t border-border pt-6">
+      <div>
+        <p className="text-xs font-medium uppercase tracking-[0.2em] text-foreground/50">
+          Duration
+        </p>
+        <p className="mt-1 font-headline text-lg font-bold text-primary">
+          {course.duration}
+        </p>
+      </div>
+
+      <Link
+        href="/enroll"
+        className="inline-flex items-center gap-2 rounded-full border border-[#9b7e46] px-5 py-3 text-sm font-bold text-[#9b7e46] bg-transparent transition-all hover:bg-[#9b7e46] hover:text-white"
+      >
+        Enroll Now
+        <ArrowRight className="h-4 w-4" />
+      </Link>
+    </div>
+  </div>
+</article>
           );
         })}
       </div>

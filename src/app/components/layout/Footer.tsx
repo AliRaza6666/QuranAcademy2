@@ -58,7 +58,7 @@ const whatsappNumber = "+9647708739184";
             {/* Col 2: Quick Links */}
             <div>
               <h3 className="text-xl font-bold mb-6 text-[#c29d59]">Quick Links</h3>
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 <Link href="/" className="text-gray-300 hover:text-[#c29d59] transition-colors text-sm py-1 block hover:opacity-80">Home</Link>
                 <Link href="/courses" className="text-gray-300 hover:text-[#c29d59] transition-colors text-sm py-1 block hover:opacity-80">Courses</Link>
                 <Link href="/about" className="text-gray-300 hover:text-[#c29d59] transition-colors text-sm py-1 block hover:opacity-80">About</Link>

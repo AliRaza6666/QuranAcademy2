@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 const TeachersPage = () => {
   return (
-    <main className="pb-20">
+    <main className="pb-20 overflow-x-hidden">
       <TeachersHeroSection />
       <TrustSection />
       <TeacherQualitiesGrid />

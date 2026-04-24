@@ -1,32 +1,46 @@
-// Teachers Page - Hero Section
 import React from "react";
-
 import Image from "next/image";
 
 const TeachersHeroSection = () => (
-  <section className="relative min-h-screen flex items-start overflow-hidden pt-20 md:pt-24" aria-label="Hero">
-    {/* Full background Teachers image */}
-    <div className="absolute inset-0 w-full h-full -z-10">
+  <section
+    className="relative min-h-svh flex items-center overflow-hidden bg-[var(--primary)]"
+    aria-label="Hero"
+  >
+    {/* Background Image */}
+    <div className="absolute inset-0 w-full h-full">
       <Image
-src="/assets/teacherpagehero.png"
+        src="/assets/teacherpagehero.png"
         alt="Teachers hero"
         fill
-        className="object-cover"
         priority
+        sizes="100vw"
+        className="object-cover object-[64%_center] sm:object-center md:scale-105 opacity-90"
       />
-      {/* Dark overlay for readability */}
-      <div className="absolute inset-0 bg-black/60" />
+
+      {/* Gradient overlay (more premium than black) */}
+      <div className="absolute inset-0 bg-gradient-to-r from-[var(--primary)]/85 via-[var(--primary)]/50 to-black/40" />
     </div>
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col justify-start min-h-screen pb-16 sm:pb-24">
-      <span className="inline-block px-4 py-1.5 rounded-full bg-accent/20 text-accent font-bold tracking-[0.2em] uppercase mb-6 font-label text-xs w-fit">
+
+    {/* Content */}
+    <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col justify-center min-h-svh pt-28 pb-10 sm:pt-32">
+
+      {/* Badge */}
+      <span className="inline-block px-4 py-1.5 rounded-full bg-[var(--accent)]/20 text-white font-bold tracking-[0.2em] uppercase mb-6 text-xs w-fit backdrop-blur">
         The Guardians of Knowledge
       </span>
-      <h1 className="text-5xl md:text-7xl font-extrabold text-white font-headline leading-[1.1] tracking-tight mb-8 max-w-3xl">
-        Guided by the <span className="text-accent italic">Wisdom</span> of the Ages.
+
+      {/* Heading */}
+      <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white leading-[1.1] mb-8 max-w-3xl">
+        Guided by the <span className="text-[var(--accent)]">Wisdom</span> of the Ages.
       </h1>
-      <p className="text-xl text-white/90 font-body leading-relaxed mb-12 max-w-xl">
-        Our educators are more than instructors; they are mentors dedicated to the spiritual and intellectual growth of every student, bridging traditional scholarship with modern pedagogy.
+
+      {/* Description */}
+      <p className="text-base sm:text-lg md:text-xl text-white/80 leading-relaxed mb-12 max-w-xl">
+        Our educators are more than instructors; they are mentors dedicated to
+        the spiritual and intellectual growth of every student, bridging
+        traditional scholarship with modern pedagogy.
       </p>
+
     </div>
   </section>
 );

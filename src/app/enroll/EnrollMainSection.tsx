@@ -179,11 +179,11 @@ const countryCodes = [
         </div>
 
         {/* ================= RIGHT SIDE ================= */}
-        <div className="relative overflow-hidden rounded-3xl border border-border bg-white p-6 shadow-xl sm:p-10 lg:p-16">
+        <div className="relative overflow-hidden rounded-3xl border border-border bg-white/80 p-6 shadow-xl sm:p-10 lg:p-16">
           {/* FORM */}
           <form onSubmit={handleSubmit} className="relative z-10 space-y-7">
             <div>
-              <label className="mb-3 block text-xs font-bold uppercase text-foreground/60">
+              <label className="mb-3 block text-xs font-bold uppercase text-black">
                 Full Name
               </label>
               <input
@@ -198,7 +198,7 @@ const countryCodes = [
             </div>
 
             <div>
-              <label className="mb-3 block text-xs font-bold uppercase text-foreground/60">
+              <label className="mb-3 block text-xs font-bold uppercase text-black">
                 Email Address
               </label>
               <input
@@ -212,9 +212,9 @@ const countryCodes = [
               />
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div>
-                <label className="mb-3 block text-xs font-bold uppercase text-foreground/60">
+                <label className="mb-3 block text-xs font-bold uppercase text-black">
                   Country Code
                 </label>
                 <select
@@ -233,7 +233,7 @@ const countryCodes = [
                 </select>
               </div>
               <div>
-                <label className="mb-3 block text-xs font-bold uppercase text-foreground/60">
+                <label className="mb-3 block text-xs font-bold uppercase text-black">
                   Phone Number
                 </label>
                 <input
@@ -249,7 +249,7 @@ const countryCodes = [
             </div>
 
             <div>
-              <label className="mb-3 block text-xs font-bold uppercase text-foreground/60">
+              <label className="mb-3 block text-xs font-bold uppercase text-black">
                 Course Selection
               </label>
               <select
@@ -269,10 +269,10 @@ const countryCodes = [
             </div>
 
             <div>
-              <label className="mb-3 block text-xs font-bold uppercase text-foreground/60">
+              <label className="mb-3 block text-xs font-bold uppercase text-black">
                 Experience Level
               </label>
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {experienceLevels.map((level) => (
                   <label key={level} className="flex items-center gap-2 p-3 rounded-2xl border cursor-pointer hover:bg-secondary/10 transition-colors">
                     <input
@@ -290,7 +290,7 @@ const countryCodes = [
             </div>
 
             <div>
-              <label className="mb-3 block text-xs font-bold uppercase text-foreground/60">
+              <label className="mb-3 block text-xs font-bold uppercase text-black ">
                 Additional Notes (Optional)
               </label>
               <textarea

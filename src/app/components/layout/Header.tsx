@@ -33,7 +33,7 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 w-full z-50">
       <nav className="mx-auto px-3 max-w-7xl w-full">
-        <div className="bg-black/20 backdrop-blur-md rounded-full border border-white/10 px-8 py-4 flex justify-between items-center">
+        <div className="bg-black/20 backdrop-blur-md rounded-full border border-white/10 px-4 py-3 sm:px-6 sm:py-4 lg:px-8 flex justify-between items-center gap-3">
           
           {/* Logo - Image + Brand Text */}
           <Link
@@ -51,7 +51,7 @@ export function Header() {
                 className="w-12 h-12 object-contain drop-shadow-md transition-transform group-hover:scale-105"
               />
             </span>
-            <span className="text-2xl font-serif font-bold tracking-wide text-white group-hover:text-[#c29d59] transition-colors duration-300">
+            <span className="hidden sm:inline text-xl lg:text-2xl font-serif font-bold tracking-wide text-white group-hover:text-[#c29d59] transition-colors duration-300">
               <span className="text-[#c29d59]">Shia</span> Quran Hub
             </span>
           </Link>

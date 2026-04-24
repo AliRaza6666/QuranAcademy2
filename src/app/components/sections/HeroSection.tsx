@@ -68,7 +68,7 @@ import Image from "next/image";
 export function HeroSection() {
   return (
     <section
-      className="relative w-full h-screen flex items-center overflow-hidden"
+      className="relative w-full min-h-svh flex items-center overflow-hidden"
       aria-label="Hero"
     >
       {/* Background Image */}
@@ -78,7 +78,7 @@ export function HeroSection() {
           alt="Quran on stand"
           fill
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-cover object-[62%_center] sm:object-center md:scale-105"
           priority
           quality={80}
         />
@@ -86,37 +86,37 @@ export function HeroSection() {
       </div>
 
       {/* Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-start pt-24 md:pt-32">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col items-start pt-28 pb-10 sm:pt-32 md:pt-36">
         
         <span className="inline-block px-4 py-1.5 rounded-full bg-accent/20 text-accent font-bold tracking-[0.2em] uppercase mb-6 font-label text-xs w-fit">
           Spiritual Excellence
         </span>
 
-        <h1 className="text-5xl md:text-7xl font-extrabold text-white font-headline leading-[1.1] tracking-tight mb-8 max-w-3xl">
+        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-white font-headline leading-[1.1] tracking-tight mb-8 max-w-3xl">
           Learn Quran with <span className="text-accent">Expert Guidance</span> from Home
         </h1>
 
-        <p className="text-xl text-white/90 font-body leading-relaxed mb-12 max-w-xl">
+        <p className="text-base sm:text-lg md:text-xl text-white/90 font-body leading-relaxed mb-12 max-w-xl">
           A modern sanctuary for spiritual growth. Connect with qualified scholars and master the Quran through tailored online sessions designed for your lifestyle.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mb-12">
           <a
             href="/enroll"
-            className="bg-accent text-accent-foreground px-10 py-5 rounded-xl font-headline font-extrabold text-lg hover:bg-accent/80 transition-all shadow-xl shadow-primary/20 text-center"
+            className="bg-accent text-accent-foreground px-6 py-4 sm:px-8 sm:py-4 lg:px-10 lg:py-5 rounded-xl font-headline font-extrabold text-base sm:text-lg hover:bg-accent/80 transition-all shadow-xl shadow-primary/20 text-center"
           >
             Start Learning
           </a>
           <a
             href="/courses"
-            className="border border-accent/60 text-white px-10 py-5 rounded-xl font-headline font-bold text-lg hover:bg-white/10 transition-all text-center"
+            className="border border-accent/60 text-white px-6 py-4 sm:px-8 sm:py-4 lg:px-10 lg:py-5 rounded-xl font-headline font-bold text-base sm:text-lg hover:bg-white/10 transition-all text-center"
           >
             Explore Courses
           </a>
         </div>
 
         {/* Quote Card */}
-        <div className="w-full max-w-md z-20 mt-10 relative md:absolute md:top-1/2 md:-translate-y-1/2 md:right-8">
+        <div className="w-full max-w-md z-20 mt-8 sm:mt-10 relative md:absolute md:top-1/2 md:-translate-y-1/2 md:right-8">
           <div className="bg-white/10 backdrop-blur-md p-6 md:p-8 rounded-2xl border border-white/20 shadow-2xl">
             <p className="text-xl md:text-3xl font-headline italic text-white leading-relaxed text-center md:text-left">
               "Read, and your Lord is the Most Generous."

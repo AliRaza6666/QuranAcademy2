@@ -139,13 +139,13 @@ export function ContactMainSection() {
         </div>
 
         {/* ================= RIGHT SIDE ================= */}
-        <div className="relative overflow-hidden rounded-3xl border border-border bg-white p-6 shadow-xl sm:p-10 lg:p-16">
+        <div className="relative overflow-hidden rounded-3xl border border-border bg-white/80 p-6 shadow-xl sm:p-10 lg:p-16">
 
           {/* FORM */}
           <form onSubmit={handleSubmit} className="relative z-10 space-y-7">
 
             <div>
-              <label className="mb-3 block text-xs font-bold uppercase text-foreground/60">
+              <label className="mb-3 block text-xs font-bold uppercase text-black">
                 Full Name
               </label>
               <input
@@ -160,7 +160,7 @@ export function ContactMainSection() {
             </div>
 
             <div>
-              <label className="mb-3 block text-xs font-bold uppercase text-foreground/60">
+              <label className="mb-3 block text-xs font-bold uppercase text-black">
                 Email Address
               </label>
               <input
@@ -175,7 +175,7 @@ export function ContactMainSection() {
             </div>
 
             <div>
-              <label className="mb-3 block text-xs font-bold uppercase text-foreground/60">
+              <label className="mb-3 block text-xs font-bold uppercase text-black">
                 Your Message
               </label>
               <textarea
@@ -202,7 +202,7 @@ export function ContactMainSection() {
 
           {/* GALLERY (UNCHANGED) */}
           <div className="mt-12 border-t border-border pt-10">
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
               {gallery.map((item) => (
                 <div
                   key={item.src}
